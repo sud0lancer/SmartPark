@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="CodePixar">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>BookingForm</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+		<!--
+		CSS
+		============================================= -->
+		<link rel="stylesheet" href="css/linearicons.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/nice-select.css">
+		<link rel="stylesheet" href="css/magnific-popup.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body class="dup-body">
+		<div class="dup-body-wrap">
+			<!-- Start Header Area -->
+			<header class="default-header">
+				<div class="header-wrap">
+					<div class="header-top d-flex justify-content-between align-items-center">
+						<div class="logo">
+							<a href="index.html"><img src="img/logo.png" alt=""></a>
+						</div>
+						<div class="main-menubar d-flex align-items-center">
+							<nav class="hide">
+								<a href="index.html">Home</a>
+								<a href="generic.html">Generic</a>
+								<a href="elements.html">Elements</a>
+							</nav>
+							<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+						</div>
+					</div>
+				</div>
+			</header>
+		<!-- End Header Area -->
+		<!-- Start Banner Area -->
+		<section class="generic-banner relative">
+			<div class="container">
+				<div class="row height align-items-center justify-content-center">
+					<div class="col-lg-10">
+						<div class="banner-content text-center">
+							<h2>Book Your Slot</h2>
+							<p>Fill up the details below to get yourself a parking spot.</p>
+							<br>
+							<br>
+						</div>
+			<!-- form-->
+			<form class="form-horizontal" data-toggle="validator" action="submit.php" role="form" method="post" name="f">
+              <div class="form-group">
+                <label for="uemail" class="col-sm-2 control-label">Email<sup>*</sup></label>
+                <div class="col-sm-9">
+                  <input type="email" class="form-control" id="uemail" name="uemail" placeholder="Your Email (We will send a email to this)" value="" required>
+                  <div class="help-block with-errors pull-right"></div>
+                  <span class="form-control-feedback" aria-hidden="true"></span>
+                </div>
+              </div>
+           
+               <div class="form-group">
+                <label for="mobile" class="col-sm-2 control-label">Mobile<sup>*</sup></label>
+                <div class="col-sm-9">
+                  <input type="tel" pattern="[0-9]{10}" class="form-control" id="mobile" name="mobile" placeholder="xxxxxxxx" value="" data-error="Please enter a 10 digit mobile number" required>
+                  <div class="help-block with-errors pull-right"></div>
+                  <span class="form-control-feedback" aria-hidden="true"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="ttype" class="col-sm-2 control-label">Vehicle Type<sup>*</sup></label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="ttype" name="ttype">
+                    <!--option value="" selected disabled-->Please select<!--/option-->
+                    <option hidden >Display but don't show in list</option>
+                    <option value="A">4 Wheeler</option>
+                    <option value="B">2 Wheeler</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="quantity" class="col-sm-2 control-label">Quantity<sup>*</sup></label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="quantity" name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="amount" class="col-sm-2 control-label">Amount<sup>*</sup></label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount in Rs." value="" required readonly="readonly">
+                  <div class="help-block with-errors pull-right"></div>
+                  <span class="form-control-feedback" aria-hidden="true"></span>
+                </div>
+              </div>
+              <!-- <div class="form-group" id="datetime">
+                  <label for="paidon" class="col-sm-2 control-label">Paid On<sup>*</sup></label>
+                  <div class="col-sm-9">
+                    <div class='input-group date' id='datetimepicker1'>
+                      <input id="paidon" type='text' name="paidon" class="form-control"/>
+                      <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                    <div class="help-block with-errors pull-right"></div>
+                    <span class="form-control-feedback" aria-hidden="true"></span>
+                  </div>
+              </div> -->
+              <div class="form-group">
+                <label for="tranvia" class="col-sm-2 control-label">Pay Via<sup>*</sup></label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="tranvia" name="tranvia">
+                    <option value="PhonePe">PhonePE</option>
+                    <option value="Paytm">Paytm</option>
+                    <option value="Tez">Tez</option>
+                  </select>
+                </div>
+              </div>
+                
+              <div class="text-center" style="margin-top=2em;">
+                <h6> Make sure you have paid amount specified in amount field. </h6>
+              </div>  
+              <div class="form-group">
+                <div class="col-sm-12" style="text-align:center; margin-top:1em;">
+                  <button type="submit" id="submit" name="sub" class="btn btn-yellow">Submit<i class="fa fa-paper-plane" aria-hidden="true" style="padding-left:0.6em;"></i></button>
+                </div>
+              </div>
+            </form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Banner Area -->
+ 
+      <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+      <script src="../../js/bootstrap.min.js"></script>
+      <script src="script1.js"></script>
+      <script src="../../js/jquery.easing.min.js"></script>
+      <script src="../../js/scrolling-nav.js"></script>
+      <script src="../../js/validator.js"></script>
+      <script type="text/javascript" src="../../humblefoolcup/register/js/moment.min.js"></script>
+      <script type="text/javascript" src="../../humblefoolcup/register/js/bootstrap-datetimepicker.min.js"></script>
+     
+    </body>
+    </html>
